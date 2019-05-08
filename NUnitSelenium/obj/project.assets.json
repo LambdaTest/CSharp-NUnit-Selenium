@@ -1,0 +1,473 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5.2": {
+      "NUnit/3.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "NUnit3TestAdapter/3.8.0": {
+        "type": "package",
+        "build": {
+          "build/net35/NUnit3TestAdapter.props": {}
+        }
+      },
+      "Selenium.RC/3.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/ThoughtWorks.Selenium.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ThoughtWorks.Selenium.Core.dll": {}
+        }
+      },
+      "Selenium.Support/3.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/WebDriver.Support.dll": {}
+        },
+        "runtime": {
+          "lib/net40/WebDriver.Support.dll": {}
+        }
+      },
+      "Selenium.WebDriver/3.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/WebDriver.dll": {}
+        },
+        "runtime": {
+          "lib/net40/WebDriver.dll": {}
+        }
+      },
+      "Selenium.WebDriverBackedSelenium/3.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/Selenium.WebDriverBackedSelenium.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Selenium.WebDriverBackedSelenium.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5.2/win": {
+      "NUnit/3.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "NUnit3TestAdapter/3.8.0": {
+        "type": "package",
+        "build": {
+          "build/net35/NUnit3TestAdapter.props": {}
+        }
+      },
+      "Selenium.RC/3.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/ThoughtWorks.Selenium.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ThoughtWorks.Selenium.Core.dll": {}
+        }
+      },
+      "Selenium.Support/3.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/WebDriver.Support.dll": {}
+        },
+        "runtime": {
+          "lib/net40/WebDriver.Support.dll": {}
+        }
+      },
+      "Selenium.WebDriver/3.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/WebDriver.dll": {}
+        },
+        "runtime": {
+          "lib/net40/WebDriver.dll": {}
+        }
+      },
+      "Selenium.WebDriverBackedSelenium/3.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/Selenium.WebDriverBackedSelenium.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Selenium.WebDriverBackedSelenium.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5.2/win-x64": {
+      "NUnit/3.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "NUnit3TestAdapter/3.8.0": {
+        "type": "package",
+        "build": {
+          "build/net35/NUnit3TestAdapter.props": {}
+        }
+      },
+      "Selenium.RC/3.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/ThoughtWorks.Selenium.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ThoughtWorks.Selenium.Core.dll": {}
+        }
+      },
+      "Selenium.Support/3.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/WebDriver.Support.dll": {}
+        },
+        "runtime": {
+          "lib/net40/WebDriver.Support.dll": {}
+        }
+      },
+      "Selenium.WebDriver/3.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/WebDriver.dll": {}
+        },
+        "runtime": {
+          "lib/net40/WebDriver.dll": {}
+        }
+      },
+      "Selenium.WebDriverBackedSelenium/3.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/Selenium.WebDriverBackedSelenium.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Selenium.WebDriverBackedSelenium.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5.2/win-x86": {
+      "NUnit/3.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "NUnit3TestAdapter/3.8.0": {
+        "type": "package",
+        "build": {
+          "build/net35/NUnit3TestAdapter.props": {}
+        }
+      },
+      "Selenium.RC/3.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/ThoughtWorks.Selenium.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ThoughtWorks.Selenium.Core.dll": {}
+        }
+      },
+      "Selenium.Support/3.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/WebDriver.Support.dll": {}
+        },
+        "runtime": {
+          "lib/net40/WebDriver.Support.dll": {}
+        }
+      },
+      "Selenium.WebDriver/3.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/WebDriver.dll": {}
+        },
+        "runtime": {
+          "lib/net40/WebDriver.dll": {}
+        }
+      },
+      "Selenium.WebDriverBackedSelenium/3.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.5.2"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/Selenium.WebDriverBackedSelenium.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Selenium.WebDriverBackedSelenium.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NUnit/3.8.1": {
+      "sha512": "q+juwqFVwJcTvxF5rOa+4RbEkFb8pWbTH7U1wkMw3cWiUiH1gGTegJemvuCODjtT7DSo73/iMhUqc2+TmM/Nng==",
+      "type": "package",
+      "path": "nunit/3.8.1",
+      "files": [
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "lib/monoandroid/nunit.framework.dll",
+        "lib/monoandroid/nunit.framework.xml",
+        "lib/net20/NUnit.System.Linq.dll",
+        "lib/net20/nunit.framework.dll",
+        "lib/net20/nunit.framework.xml",
+        "lib/net35/nunit.framework.dll",
+        "lib/net35/nunit.framework.xml",
+        "lib/net40/nunit.framework.dll",
+        "lib/net40/nunit.framework.xml",
+        "lib/net45/nunit.framework.dll",
+        "lib/net45/nunit.framework.xml",
+        "lib/netstandard1.3/nunit.framework.dll",
+        "lib/netstandard1.3/nunit.framework.xml",
+        "lib/netstandard1.6/nunit.framework.dll",
+        "lib/netstandard1.6/nunit.framework.xml",
+        "lib/uap/nunit.framework.dll",
+        "lib/uap/nunit.framework.xml",
+        "lib/xamarin.ios/nunit.framework.dll",
+        "lib/xamarin.ios/nunit.framework.xml",
+        "nunit.3.8.1.nupkg.sha512",
+        "nunit.nuspec"
+      ]
+    },
+    "NUnit3TestAdapter/3.8.0": {
+      "sha512": "vVXeNljI7zdl1nZaKV9sm9o2FBuY2r9nDHsCIGRauUefm+PYbx/kbRGULq4EJltW3RdU9Gb+YiRnl+yofFoejg==",
+      "type": "package",
+      "path": "nunit3testadapter/3.8.0",
+      "files": [
+        "LICENSE.txt",
+        "build/net35/Mono.Cecil.Mdb.dll",
+        "build/net35/Mono.Cecil.Pdb.dll",
+        "build/net35/Mono.Cecil.Rocks.dll",
+        "build/net35/Mono.Cecil.dll",
+        "build/net35/NUnit3.TestAdapter.dll",
+        "build/net35/NUnit3TestAdapter.props",
+        "build/net35/nunit.engine.api.dll",
+        "build/net35/nunit.engine.dll",
+        "build/netcoreapp1.0/Mono.Cecil.dll",
+        "build/netcoreapp1.0/NUnit3.TestAdapter.dll",
+        "build/netcoreapp1.0/NUnit3TestAdapter.props",
+        "build/netcoreapp1.0/nunit.engine.netstandard.dll",
+        "nunit3testadapter.3.8.0.nupkg.sha512",
+        "nunit3testadapter.nuspec"
+      ]
+    },
+    "Selenium.RC/3.1.0": {
+      "sha512": "PVfriRaQoorRtRw2I41hn0WhkmKoAYQHsV+AuYy3L32l9uCJg7aeQwaq3O6QXykZIi00TF9+Jeiah38/kYT4HA==",
+      "type": "package",
+      "path": "selenium.rc/3.1.0",
+      "files": [
+        "lib/net35/ThoughtWorks.Selenium.Core.dll",
+        "lib/net35/ThoughtWorks.Selenium.Core.xml",
+        "lib/net40/ThoughtWorks.Selenium.Core.dll",
+        "lib/net40/ThoughtWorks.Selenium.Core.xml",
+        "selenium.rc.3.1.0.nupkg.sha512",
+        "selenium.rc.nuspec"
+      ]
+    },
+    "Selenium.Support/3.5.2": {
+      "sha512": "rSc29z21mCPS0h0JVMkvsEMKYdg26xQmVuixBQimhAaDZSKvJv7B6zfGJ+oNFTNQcY568mN+5GHi6EEdxQvEhw==",
+      "type": "package",
+      "path": "selenium.support/3.5.2",
+      "files": [
+        "lib/net35/WebDriver.Support.dll",
+        "lib/net35/WebDriver.Support.xml",
+        "lib/net40/WebDriver.Support.dll",
+        "lib/net40/WebDriver.Support.xml",
+        "selenium.support.3.5.2.nupkg.sha512",
+        "selenium.support.nuspec"
+      ]
+    },
+    "Selenium.WebDriver/3.5.2": {
+      "sha512": "WIk71dD2lTXtZLALV68WGWqtNPOQ5HrpItrqzkRCKoH0YozU1zXydHWRD0jm8w1m9JAsfs6qPO/DhpP+0lEEtw==",
+      "type": "package",
+      "path": "selenium.webdriver/3.5.2",
+      "files": [
+        "lib/net35/WebDriver.dll",
+        "lib/net35/WebDriver.xml",
+        "lib/net40/WebDriver.dll",
+        "lib/net40/WebDriver.xml",
+        "selenium.webdriver.3.5.2.nupkg.sha512",
+        "selenium.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriverBackedSelenium/3.5.2": {
+      "sha512": "HkFH8gW3XLWl5WPqGV4rkj6/RNB2R4CRmrB7rTMD8O96RJyfZtHKVtSxDpFyABpZdMlr1U/yQWzJDjYM32xaVg==",
+      "type": "package",
+      "path": "selenium.webdriverbackedselenium/3.5.2",
+      "files": [
+        "lib/net35/Selenium.WebDriverBackedSelenium.dll",
+        "lib/net35/Selenium.WebDriverBackedSelenium.xml",
+        "lib/net40/Selenium.WebDriverBackedSelenium.dll",
+        "lib/net40/Selenium.WebDriverBackedSelenium.xml",
+        "selenium.webdriverbackedselenium.3.5.2.nupkg.sha512",
+        "selenium.webdriverbackedselenium.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5.2": [
+      "NUnit >= 3.8.1",
+      "NUnit3TestAdapter >= 3.8.0",
+      "Selenium.RC >= 3.1.0",
+      "Selenium.Support >= 3.5.2",
+      "Selenium.WebDriverBackedSelenium >= 3.5.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\DellUser\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\ML-Script\\NUnit-Selenium-Sample-master\\NUnit-Selenium-Sample-master\\NUnitSelenium\\NUnitSelenium.csproj",
+      "projectName": "NUnitSelenium",
+      "projectPath": "D:\\ML-Script\\NUnit-Selenium-Sample-master\\NUnit-Selenium-Sample-master\\NUnitSelenium\\NUnitSelenium.csproj",
+      "packagesPath": "C:\\Users\\DellUser\\.nuget\\packages\\",
+      "outputPath": "D:\\ML-Script\\NUnit-Selenium-Sample-master\\NUnit-Selenium-Sample-master\\NUnitSelenium\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\DellUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net452"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net452": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net452": {
+        "dependencies": {
+          "NUnit": {
+            "target": "Package",
+            "version": "[3.8.1, )"
+          },
+          "NUnit3TestAdapter": {
+            "target": "Package",
+            "version": "[3.8.0, )"
+          },
+          "Selenium.RC": {
+            "target": "Package",
+            "version": "[3.1.0, )"
+          },
+          "Selenium.Support": {
+            "target": "Package",
+            "version": "[3.5.2, )"
+          },
+          "Selenium.WebDriverBackedSelenium": {
+            "target": "Package",
+            "version": "[3.5.2, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
