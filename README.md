@@ -7,7 +7,7 @@ uninterrupted use, merchantability, fitness for a particular purpose, or non-inf
 Your tests and testing environments may require you to modify this framework. 
 Issues regarding this framework should be submitted through GitHub.
 For questions regarding LambdaTest integration,
-please see the LambdaTest documentation at https://docs.lambdatest.com/. 
+please see the this documentation at https://docs.lambdatest.com/. 
 This framework is not maintained by LambdaTest Support.
 
 It helps you to understand that how to use NUnit to run parallel tests on LambdaTest platfrom 
