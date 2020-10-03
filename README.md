@@ -15,7 +15,7 @@ using nmake as the build system.
 
 Uses [NuGet](http://docs.nuget.org/) as package manager.
 
-###Dependencies:
+### Dependencies:
 
 * MS Visual Studio 2013 or later.
 * [NUnit3.0](https://www.nunit.org/)
