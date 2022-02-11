@@ -1,45 +1,67 @@
-
 # CSharp NUnit NMake
-
+![Specflow](https://opengraph.githubassets.com/1f2ceb37da0b837d247679d6ee9dfb1f7018416e5b5e6ce9bc8d96a49e1ae283/LambdaTest/CSharp-NUnit-Selenium)
 This code is provided on an "AS-IS” basis without warranty of any kind, 
 either express or implied, including without limitation any implied warranties of condition, 
 uninterrupted use, merchantability, fitness for a particular purpose, or non-infringement.
 Your tests and testing environments may require you to modify this framework. 
 Issues regarding this framework should be submitted through GitHub.
-For questions regarding LambdaTest integration,
-please see the this documentation at https://docs.lambdatest.com/. 
+For questions regarding LambdaTest integration, please see the this documentation at https://docs.lambdatest.com. 
 This framework is not maintained by LambdaTest Support.
-
 It helps you to understand that how to use NUnit to run parallel tests on LambdaTest platfrom 
-using nmake as the build system. 
+using nmake as the build system. Uses [NuGet](http://docs.nuget.org/) as package manager.
 
-Uses [NuGet](http://docs.nuget.org/) as package manager.
+## Prerequisites
+1. Setup Visual Studio with .NET core. 
+2. Download Visual studio from [Visual Studio](https://visualstudio.microsoft.com/downloads/) website. 
+3. MS Visual Studio 2013 or later.
+        * [NUnit3.0](https://www.nunit.org/)
+        * [NuGet](https://dist.nuget.org/index.html) Plugin for Visual Studio
+        * [NuGet](https://dist.nuget.org/index.html) CLI executable installed in your path.
+4. 
 
-### Dependencies:
+## Run your First Test
+Step 1. Clone the CSharp-NUnit-Selenium Repo.
+```
+git clone https://github.com/LambdaTest/CSharp-NUnit-Selenium
+```
 
-* MS Visual Studio 2013 or later.
-* [NUnit3.0](https://www.nunit.org/)
-* [NuGet](https://dist.nuget.org/index.html) Plugin for Visual Studio
-* [NuGet](https://dist.nuget.org/index.html) CLI executable installed in your path.
+Step 2. Inside CSharp-NUnit-Selenium, export the Lambda-test Credentials. You can get these from your automation dashboard.
 
+<p align="center">
+   <b>For Linux/macOS:</b>
+   
+```
+export LT_USERNAME="YOUR_USERNAME"
+export LT_ACCESS_KEY="YOUR ACCESS KEY"
+```
 
-### Setup:
+<p align="center">
+   <b>For Windows:</b>
+```
+set LT_USERNAME="YOUR_USERNAME"
+set LT_ACCESS_KEY="YOUR ACCESS KEY"
+```
 
-* Install NuGet packages for the project: <br>
-```cd Packages```<br>
-```nuget.exe install ..\NUnitSelenium\packages.config```<br>
+Step 3. Install NuGet packages for the project.
+```
+cd Packages
+nuget.exe install ..\NUnitSelenium\packages.config
+```
+Step 4. Clean and rebuild project
+```
+nmake clean build
+```
 
-* Clean and rebuild project:<br>
-```nmake clean build```
+## Run Your Test
+Run your test using the command.
+```
+nmake test
+or
+nmake all
+``` 
 
-### Set Credentials:<br>
-```set LT_USERNAME=<YOUR USERNAME>```<br>
-```set LT_ACCESS_KEY=<YOUR ACCESSKEY>```
-
-### Run Tests in parallel on [LambdaTest](https://automation.lambdatest.com) using a Developer Console:<br>
-```nmake test``` <br>
-**or**<br>
-```nmake all```<br>
+## Results of the Test
+You can view your test results on the [Automation Dashboard](https://automation.lambdatest.com/).
 
 ## About LambdaTest
 
