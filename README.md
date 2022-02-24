@@ -37,6 +37,7 @@ export LT_ACCESS_KEY="YOUR ACCESS KEY"
 
 <p align="center">
    <b>For Windows:</b>
+       
 ```
 set LT_USERNAME="YOUR_USERNAME"
 set LT_ACCESS_KEY="YOUR ACCESS KEY"
@@ -47,6 +48,7 @@ Step 3. Install NuGet packages for the project.
 cd Packages
 nuget.exe install ..\NUnitSelenium\packages.config
 ```
+       
 Step 4. Clean and rebuild project
 ```
 nmake clean build
