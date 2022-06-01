@@ -1,77 +1,223 @@
-# CSharp NUnit NMake
-![Specflow](https://opengraph.githubassets.com/1f2ceb37da0b837d247679d6ee9dfb1f7018416e5b5e6ce9bc8d96a49e1ae283/LambdaTest/CSharp-NUnit-Selenium)
-This code is provided on an "AS-IS” basis without warranty of any kind, 
-either express or implied, including without limitation any implied warranties of condition, 
-uninterrupted use, merchantability, fitness for a particular purpose, or non-infringement.
-Your tests and testing environments may require you to modify this framework. 
-Issues regarding this framework should be submitted through GitHub.
-For questions regarding LambdaTest integration, please see the this documentation at https://docs.lambdatest.com. 
-This framework is not maintained by LambdaTest Support.
-It helps you to understand that how to use NUnit to run parallel tests on LambdaTest platfrom 
-using nmake as the build system. Uses [NuGet](http://docs.nuget.org/) as package manager.
+# Run Selenium Tests With NUnit On LambdaTest
+
+![image](https://user-images.githubusercontent.com/70570645/171429042-610e8f3d-d2a4-4896-8bdb-8aeed87e0ce7.png)
+
+*Learn how to run C# scripts using NUnit framework.*
+
+
+<p align="center">
+  <a href="https://www.lambdatest.com/blog/" target="_bank">Blog</a>
+  &nbsp; &#8901; &nbsp;
+  <a href="https://www.lambdatest.com/support/docs/" target="_bank">Docs</a>
+  &nbsp; &#8901; &nbsp;
+  <a href="https://www.lambdatest.com/learning-hub/" target="_bank">Learning Hub</a>
+  &nbsp; &#8901; &nbsp;
+  <a href="https://www.lambdatest.com/newsletter/" target="_bank">Newsletter</a>
+  &nbsp; &#8901; &nbsp;
+  <a href="https://www.lambdatest.com/certifications/" target="_bank">Certifications</a>
+  &nbsp; &#8901; &nbsp;
+  <a href="https://www.youtube.com/c/LambdaTest" target="_bank">YouTube</a>
+</p>
+&emsp;
+&emsp;
+&emsp;
+
+## Table of Contents:
+
+
+* [Prerequisites](#prerequisites)
+* [Run Your First Test](#run-your-first-test)
+* [Parallel Testing With NUnit](#running-your-parallel-tests-using-nunit-testing-framework)
+* [Local Testing With NUnit](#testing-locally-hosted-or-privately-hosted-projects)
+
 
 ## Prerequisites
-1. Setup Visual Studio with .NET core. 
-2. Download Visual studio from [Visual Studio](https://visualstudio.microsoft.com/downloads/) website. 
-3. MS Visual Studio 2013 or later.
-        * [NUnit3.0](https://www.nunit.org/)
-        * [NuGet](https://dist.nuget.org/index.html) Plugin for Visual Studio
-        * [NuGet](https://dist.nuget.org/index.html) CLI executable installed in your path.
-4. 
 
-## Run your First Test
-Step 1. Clone the CSharp-NUnit-Selenium Repo.
+
+Before you can start performing **C#** automation testing with **Selenium**, you would need to:
+
+* Download and install **Selenium WebDriver** from its [official website](https://www.selenium.dev/downloads/).
+* Make sure you have the latest version of C#.
+* **.Net** framework to deliver guidelines while developing a range of application using C#.
+* Download [Selenium WebDriver Language Binding](https://www.selenium.dev/downloads/) for C# and extract them to appropriate folder. A [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) of 2.1 or greater version.
+
+### Installing Selenium Dependencies And Tutorial Repo
+
+**Step 1:** Clone the LambdaTest CSharp-NUnit-Selenium GitHub repository and navigate to the code directory as shown below:
+
 ```
 git clone https://github.com/LambdaTest/CSharp-NUnit-Selenium
+cd CSharp-NUnit-Selenium
 ```
 
-Step 2. Inside CSharp-NUnit-Selenium, export the Lambda-test Credentials. You can get these from your automation dashboard.
+### Setting up Your Authentication
 
-<p align="center">
-   <b>For Linux/macOS:</b>
-   
+Make sure you have your LambdaTest credentials with you to run C# automation scripts. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/login) or by your LambdaTest Profile.
+
+**Step 2:** Set LambdaTest Username and Access Key in environment variables.
+
+ **For Linux/macOS**:
+ 
+ `export LT_USERNAME="YOUR_USERNAME" export LT_ACCESS_KEY="YOUR ACCESS KEY"`
+ 
+ **For Windows**:
+ 
+ `set LT_USERNAME="YOUR_USERNAME" set LT_ACCESS_KEY="YOUR ACCESS KEY"`
+
+## Run Your First Test
+
+**Step 3:** Navigate to [NUnitSeleniumTests.cs](https://github.com/LambdaTest/CSharp-NUnit-Selenium/blob/master/NUnitSelenium/NUnitSeleniumTests.cs) using VSCode. Copy and replace this code in the NUnitSeleniumTests.cs file in the project you opened in the previous step.
+
+### Configuration of Your Test Capabilities
+
+**Step 4:** In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with LambdaTest Selenium grid capabilities via capabilities object. 
+
+The capabilities object in the above code are defined as:
+
 ```
-export LT_USERNAME="YOUR_USERNAME"
-export LT_ACCESS_KEY="YOUR ACCESS KEY"
+DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.SetCapability(CapabilityType.BrowserName, "Chrome");
+            capabilities.SetCapability(CapabilityType.Version, "96");
+            capabilities.SetCapability(CapabilityType.Platform, "Windows 10");
 ```
 
-<p align="center">
-   <b>For Windows:</b>
-       
-```
-set LT_USERNAME="YOUR_USERNAME"
-set LT_ACCESS_KEY="YOUR ACCESS KEY"
-```
+**Note:** You can generate capabilities for your test requirements with the help of **[Desired Capabilitiy Generator](https://www.lambdatest.com/capabilities-generator/)**.
 
-Step 3. Install NuGet packages for the project.
+### Executing the Test
+
+**Step 5:** Build the solution by clicking on **Build > Build Solution**.
+
+**Step 6:** As shown below click on Test Explorer on your MS Visual Studio:
+
+<img height ="300" src="https://user-images.githubusercontent.com/70570645/171259137-307144a3-e0b0-4b45-865b-38f69b2b6776.png"/>
+
+**Step 7:** Click on **Run** from the Test Explorer to run the sample test as shown below:
+
+<img height ="300" src="https://user-images.githubusercontent.com/70570645/171259718-1828f238-bec0-483a-954a-d7153958a6d0.png"/>
+
+### Executing in Linux/macOS
+
+ * Install NuGet Packages for the project.
+ 
 ```
 cd Packages
 nuget.exe install ..\NUnitSelenium\packages.config
 ```
-       
-Step 4. Clean and rebuild project
-```
+
+ * Clean and rebuild project.
+ 
+```csharp
 nmake clean build
 ```
+Your results would be displayed on the test console and on the LambdaTest Automation Dashboard.
 
-## Run Your Test
-Run your test using the command.
+## Running Your Parallel Tests Using NUnit Testing Framework
+
+
+ **Executing Parallel tests in Windows**
+
+ To run parallel tests, go to **Test Explorer** on Visual Studio as mentioned above and click **Run All** tests to execute the tests. 
+ 
+ **Executing  parallel tests in Linux/MacOS**
+ 
 ```
-nmake test
-or
-nmake all
-``` 
+nmake test OR nmake all
+```
+Your results would be displayed on the test console and on the LambdaTest Automation Dashboard.
 
-## Results of the Test
-You can view your test results on the [Automation Dashboard](https://automation.lambdatest.com/).
+## Testing Locally Hosted Or Privately Hosted Projects
 
+You can test your locally hosted or privately hosted projects with LambdaTest Selenium grid using LambdaTest Tunnel. All you would have to do is set up an SSH tunnel using tunnel and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are live.
+
+Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) for more information.
+
+Here’s how you can establish LambdaTest Tunnel.
+
+Download the binary file of:
+* [LambdaTest Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+* [LambdaTest Tunnel for macOS](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+* [LambdaTest Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+
+Open command prompt and navigate to the binary folder.
+
+Run the following command:
+
+```bash
+LT -user {user’s login email} -key {user’s access key}
+```
+So if your user name is lambdatest@example.com and key is 123456, the command would be:
+
+```bash
+LT -user lambdatest@example.com -key 123456
+```
+Once you are able to connect **LambdaTest Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
+
+**Tunnel Capability**
+
+```java
+DesiredCapabilities capabilities = new DesiredCapabilities();        
+        capabilities.setCapability("tunnel", true);
+```
+
+## Tutorials 📙
+
+Check out our latest tutorials on Selenium NUnit 👇
+
+* [NUnit Environment Setup](https://www.lambdatest.com/blog/setup-nunit-environment-with-visual-studio/)
+* [NUnit With Selenium](https://www.lambdatest.com/blog/nunit-testing-tutorial-for-selenium-csharp/)
+* [Selenium WebDriver Commands in NUnit](https://www.lambdatest.com/blog/top-28-selenium-webdriver-commands-in-nunit-for-test-automation/)
+* [NUnit Parameterized Unit Tests](https://www.lambdatest.com/blog/nunit-parameterized-test-examples/)
+* [NUnit Asserts](https://www.lambdatest.com/blog/asserts-in-nunit/)
+* [NUnit Annotations](https://www.lambdatest.com/blog/nunit-annotations-for-selenium-automation/)
+* [Generating Test Reports In NUnit](https://www.lambdatest.com/blog/report-in-nunit/)
+* [Parallel Execution In NUnit](https://www.lambdatest.com/blog/parallel-execution-with-specflow-nunit-and-selenium/)
+
+For video tutorials on Selenium NUnit, please refer to our [NUnit Tutorial Playlist](https://www.youtube.com/playlist?list=PLZMWkkQEwOPkg_-aMxUHDUp5DF_zQ5xxK). ▶️
+
+Subscribe To Our [LambdaTest YouTube Channel 🔔](https://www.youtube.com/c/LambdaTest) and keep up-to-date on the latest video tutorial around software testing world.
+
+## Documentation & Resources :books:
+
+Visit the following links to learn more about LambdaTest's features, setup and tutorials around test automation, mobile app testing, responsive testing, and manual testing.
+
+* [LambdaTest Documentation](https://www.lambdatest.com/support/docs/)
+* [LambdaTest Blog](https://www.lambdatest.com/blog/)
+* [LambdaTest Learning Hub](https://www.lambdatest.com/learning-hub/)     
+
+## LambdaTest Community :busts_in_silhouette:
+
+The [LambdaTest Community](https://community.lambdatest.com/) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
+
+## What's New At LambdaTest ❓
+
+To stay updated with the latest features and product add-ons, visit [Changelog](https://changelog.lambdatest.com/) 
+      
 ## About LambdaTest
 
-[LambdaTest](https://www.lambdatest.com/) is a cloud based selenium grid infrastructure that can help you run automated cross browser compatibility tests on 2000+ different browser and operating system environments. LambdaTest supports all programming languages and frameworks that are supported with Selenium, and have easy integrations with all popular CI/CD platforms. It's a perfect solution to bring your [selenium automation testing](https://www.lambdatest.com/selenium-automation) to cloud based infrastructure that not only helps you increase your test coverage over multiple desktop and mobile browsers, but also allows you to cut down your test execution time by running tests on parallel.
+[LambdaTest](https://www.lambdatest.com) is a leading test execution and orchestration platform that is fast, reliable, scalable, and secure. It allows users to run both manual and automated testing of web and mobile apps across 3000+ different browsers, operating systems, and real device combinations. Using LambdaTest, businesses can ensure quicker developer feedback and hence achieve faster go to market. Over 500 enterprises and 1 Million + users across 130+ countries rely on LambdaTest for their testing needs.    
 
-### Resources
+### Features
 
-##### [SeleniumHQ Documentation](http://www.seleniumhq.org/docs/)
+* Run Selenium, Cypress, Puppeteer, Playwright, and Appium automation tests across 3000+ real desktop and mobile environments.
+* Real-time Cross browser testing on 3000+ environments.
+* Test on Real device cloud
+* Blazing fast test automation with HyperExecute
+* Accelerate testing, shorten job times and get faster feedback on code changes with Test At Scale.
+* Smart Visual Regression Testing on cloud
+* 120+ third-party integration with your favourite tool for CI/CD, Project Management, Codeless Automation, and more.
+* Automated Screenshot testing across multiple browsers in a single click.
+* Local testing of web and mobile apps.
+* Online Accessibility Testing across 3000+ desktop and mobile browsers, browser versions, and operating systems.
+* Geolocation testing of web and mobile apps across 53+ countries.
+* LT Browser - for responsive testing across 50+ pre-installed mobile, tablets, desktop, and laptop viewports.
 
-##### [NUnit Documentation](https://github.com/nunit/nunit/wiki)
+    
+[<img height="70" src="https://user-images.githubusercontent.com/70570645/169649126-ed61f6de-49b5-4593-80cf-3391ca40d665.PNG">](https://accounts.lambdatest.com/register)
+
+
+ ## We are here to help you :headphones:
+
+* Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com)
+* For more info, visit - https://www.lambdatest.com
+
 
