@@ -1,0 +1,213 @@
+using System;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
+using NUnit.Framework;
+using System.Threading;
+using System.Collections.Generic;
+
+namespace NUnitSelenium
+{
+    [TestFixture("Chrome", "100.0", "Windows 10", "1024x768")]
+    [Parallelizable(ParallelScope.Children)]
+    public class NUnitSeleniumSample
+    {
+        public static string LT_USERNAME = "aponsakthi";
+        public static string LT_ACCESS_KEY = "2XEsZWvx58YPVCgYwRxR3SiLMDLdPCIuJck5ZpjxSp75pwkx5r";
+        public static bool tunnel = Boolean.Parse(Environment.GetEnvironmentVariable("LT_TUNNEL")== null ? "false" : Environment.GetEnvironmentVariable("LT_TUNNEL"));       
+        public static string build = Environment.GetEnvironmentVariable("LT_BUILD") == null ? "your build name" : Environment.GetEnvironmentVariable("LT_BUILD");
+        public static string seleniumUri = "https://hub.lambdatest.com/wd/hub";
+
+
+        ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>();
+        private String browser;
+        private String version;
+        private String os;
+        private String resolution;
+
+        public NUnitSeleniumSample(String browser, String version, String os, String resolution)
+        {
+            this.browser = browser;
+            this.version = version;
+            this.os = os;
+            this.resolution = resolution;
+        }
+
+        [SetUp]
+        public void Init()
+        {
+            
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.SetCapability("browserName", browser);
+            capabilities.SetCapability("version", version);
+            capabilities.SetCapability("platform", os);
+            capabilities.SetCapability("resolution", resolution);
+
+            //Requires a named tunnel.
+            if (tunnel)
+            {
+                capabilities.SetCapability("tunnel", tunnel);
+            }
+            if (build != null)
+            {
+                capabilities.SetCapability("build", build);
+            }
+          
+            capabilities.SetCapability("user", LT_USERNAME);
+            capabilities.SetCapability("accessKey", LT_ACCESS_KEY);
+
+            capabilities.SetCapability("name",
+            String.Format("{0}:{1}",
+            TestContext.CurrentContext.Test.ClassName,
+            TestContext.CurrentContext.Test.MethodName));
+            driver.Value = new RemoteWebDriver(new Uri(seleniumUri), capabilities, TimeSpan.FromSeconds(600));
+            Console.Out.WriteLine(driver);
+        }
+
+        [Test]
+       public void Todotest()
+        {
+            {
+                Console.WriteLine("Navigating to todos app.");
+                driver.Value.Navigate().GoToUrl("https://lambdatest.github.io/sample-todo-app/");
+
+                driver.Value.FindElement(By.Name("li4")).Click();
+                Console.WriteLine("Clicking Checkbox");
+                driver.Value.FindElement(By.Name("li5")).Click();
+
+
+                // If both clicks worked, then te following List should have length 2
+                IList<IWebElement> elems = driver.Value.FindElements(By.ClassName("done-true"));
+                // so we'll assert that this is correct.
+                Assert.AreEqual(2, elems.Count);
+
+                Console.WriteLine("Entering Text");
+                driver.Value.FindElement(By.Id("sampletodotext")).SendKeys("Yey, Let's add it to list");
+                driver.Value.FindElement(By.Id("addbutton")).Click();
+
+
+                // lets also assert that the new todo we added is in the list
+                string spanText = driver.Value.FindElement(By.XPath("/html/body/div/div/div/ul/li[6]/span")).Text;
+                Assert.AreEqual("Yey, Let's add it to list", spanText);
+
+            }
+        }
+
+[TestClass]
+    public class Testscenarios
+    {
+        [TestMethod]
+        public void Testscenario1()
+        {
+            IWebDriver driver = new ChromeDriver();
+
+            driver.Manage().Window.Maximize();
+
+            driver.Navigate().GoToUrl("https://www.lambdatest.com/selenium-playground/");
+
+            driver.FindElement(By.LinkText("Simple Form Demo")).Click();
+
+            IWebElement element = driver.FindElement(By.Id("user-message"));
+
+            element.SendKeys("Welcome to LambdaTest");
+
+            driver.FindElement(By.Id("showInput")).Click();
+
+            Thread.Sleep(2000);
+            driver.Quit();
+
+        }
+
+        [TestMethod]
+
+        public void Tesscenario2()
+        {
+            // Drag and Drop 
+
+            IWebDriver driver = new ChromeDriver();
+
+            driver.Manage().Window.Maximize();
+
+            driver.Navigate().GoToUrl("https://www.lambdatest.com/selenium-playground/");
+            driver.FindElement(By.LinkText("Drag & Drop Sliders")).Click();
+            driver.FindElement(By.XPath("/html/body/div[1]/div[1]/section[3]/div/div/div[2]/div[2]/div[1]/div/input"));
+
+            //var action = new Actions(driver);
+
+            //IWebElement right = null;
+            //action
+            //  .DragAndDropToOffset(right, 100, 0)
+            //  .Build()
+            //  .Perform();
+
+            Actions action = new Actions(driver);
+
+            action.DragAndDropToOffset(driver.FindElement(By.XPath("/html/body/div[1]/div[1]/section[3]/div/div/div[2]/div[2]/div[1]/div/input")), 120, 0)
+            
+            .Build()
+            .Perform();
+
+            Thread.Sleep(2000);
+            driver.Quit();
+            
+        }
+
+
+        [TestMethod]
+        public void Testscenarion3()
+        {
+            // Input for submission
+        
+            IWebDriver driver = new ChromeDriver();
+
+            driver.Manage().Window.Maximize();
+
+            driver.Navigate().GoToUrl("https://www.lambdatest.com/selenium-playground/");
+
+            driver.FindElement(By.LinkText("Input Form Submit")).Click();
+
+                        
+            driver.FindElement(By.Id("name")).SendKeys("Ponsakthi");
+            driver.FindElement(By.Id("inputEmail4")).SendKeys("example@gmail.com");
+            driver.FindElement(By.Id("inputPassword4")).SendKeys("Password");
+            driver.FindElement(By.Id("company")).SendKeys("CTS");
+            driver.FindElement(By.Id("websitename")).SendKeys("www.google.com");
+            driver.FindElement(By.Name("country")).SendKeys("United States");
+
+            driver.FindElement(By.Id("inputCity")).SendKeys("Texas");
+            driver.FindElement(By.Id("inputAddress1")).SendKeys("No.143, Nethaji St");
+            driver.FindElement(By.Id("inputAddress2")).SendKeys("Banerji");
+            driver.FindElement(By.Id("inputAddress2")).SendKeys("Banerji");
+            driver.FindElement(By.Id("inputState")).SendKeys("TX");
+            driver.FindElement(By.Id("inputZip")).SendKeys("4320");
+                        
+            IWebElement element = driver.FindElement(By.XPath("/html/body/div[1]/div[1]/section[3]/div/div/div[2]/div/form/div[6]/button"));
+
+            element.Click();
+
+            Thread.Sleep(2000);
+            driver.Quit();
+
+        }
+
+
+
+
+    }
+        [TearDown]
+        public void Cleanup()
+        {
+            bool passed = TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Passed;
+            try
+            {
+                // Logs the result to LambdaTest
+                ((IJavaScriptExecutor)driver.Value).ExecuteScript("lambda-status=" + (passed ? "passed" : "failed"));
+            }
+            finally
+            {
+                
+                // Terminates the remote webdriver session
+                driver.Value.Quit();
+            }
+        }
+    }
+}
