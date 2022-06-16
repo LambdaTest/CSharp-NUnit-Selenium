@@ -22,7 +22,7 @@
 &emsp;
 &emsp;
 
-[<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register)
+[<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)
 
 ## Table of Contents:
 
@@ -54,7 +54,7 @@ cd CSharp-NUnit-Selenium
 
 ### Setting up Your Authentication
 
-Make sure you have your LambdaTest credentials with you to run C# automation scripts. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/login) or by your LambdaTest Profile.
+Make sure you have your LambdaTest credentials with you to run C# automation scripts. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/login?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium) or by your LambdaTest Profile.
 
 **Step 2:** Set LambdaTest Username and Access Key in environment variables.
 
@@ -85,7 +85,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.SetCapability(CapabilityType.Platform, "Windows 10");
 ```
 
-**Note:** You can generate capabilities for your test requirements with the help of **[Desired Capabilitiy Generator](https://www.lambdatest.com/capabilities-generator/)**.
+**Note:** You can generate capabilities for your test requirements with the help of **[Desired Capabilitiy Generator](https://www.lambdatest.com/capabilities-generator/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)**.
 
 ### Executing the Test
 
@@ -133,7 +133,7 @@ Your results would be displayed on the test console and on the LambdaTest Automa
 
 You can test your locally hosted or privately hosted projects with LambdaTest Selenium grid using LambdaTest Tunnel. All you would have to do is set up an SSH tunnel using tunnel and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are live.
 
-Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) for more information.
+Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium) for more information.
 
 Here’s how you can establish LambdaTest Tunnel.
 
@@ -167,14 +167,14 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 
 Check out our latest tutorials on Selenium NUnit 👇
 
-* [NUnit Environment Setup](https://www.lambdatest.com/blog/setup-nunit-environment-with-visual-studio/)
-* [NUnit With Selenium](https://www.lambdatest.com/blog/nunit-testing-tutorial-for-selenium-csharp/)
-* [Selenium WebDriver Commands in NUnit](https://www.lambdatest.com/blog/top-28-selenium-webdriver-commands-in-nunit-for-test-automation/)
-* [NUnit Parameterized Unit Tests](https://www.lambdatest.com/blog/nunit-parameterized-test-examples/)
-* [NUnit Asserts](https://www.lambdatest.com/blog/asserts-in-nunit/)
-* [NUnit Annotations](https://www.lambdatest.com/blog/nunit-annotations-for-selenium-automation/)
-* [Generating Test Reports In NUnit](https://www.lambdatest.com/blog/report-in-nunit/)
-* [Parallel Execution In NUnit](https://www.lambdatest.com/blog/parallel-execution-with-specflow-nunit-and-selenium/)
+* [NUnit Environment Setup](https://www.lambdatest.com/blog/setup-nunit-environment-with-visual-studio/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)
+* [NUnit With Selenium](https://www.lambdatest.com/blog/nunit-testing-tutorial-for-selenium-csharp/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)
+* [Selenium WebDriver Commands in NUnit](https://www.lambdatest.com/blog/top-28-selenium-webdriver-commands-in-nunit-for-test-automation/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)
+* [NUnit Parameterized Unit Tests](https://www.lambdatest.com/blog/nunit-parameterized-test-examples/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)
+* [NUnit Asserts](https://www.lambdatest.com/blog/asserts-in-nunit/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)
+* [NUnit Annotations](https://www.lambdatest.com/blog/nunit-annotations-for-selenium-automation/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)
+* [Generating Test Reports In NUnit](https://www.lambdatest.com/blog/report-in-nunit/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)
+* [Parallel Execution In NUnit](https://www.lambdatest.com/blog/parallel-execution-with-specflow-nunit-and-selenium/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)
 
 For video tutorials on Selenium NUnit, please refer to our [NUnit Tutorial Playlist](https://www.youtube.com/playlist?list=PLZMWkkQEwOPkg_-aMxUHDUp5DF_zQ5xxK). ▶️
 
@@ -190,7 +190,7 @@ Visit the following links to learn more about LambdaTest's features, setup and t
 
 ## LambdaTest Community :busts_in_silhouette:
 
-The [LambdaTest Community](https://community.lambdatest.com/) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
+The [LambdaTest Community](https://community.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
 
 ## What's New At LambdaTest ❓
 
@@ -216,9 +216,9 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
 * LT Browser - for responsive testing across 50+ pre-installed mobile, tablets, desktop, and laptop viewports.
 
     
-[<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register)
+[<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)
 
  ## We are here to help you :headphones:
 
-* Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com)
+* Got a query? we are available 24x7 to help. [Contact Us](mailto:support@lambdatest.com)
 * For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=CSharp-NUnit-Selenium)
