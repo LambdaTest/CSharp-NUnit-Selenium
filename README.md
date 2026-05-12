@@ -1,4 +1,4 @@
-# Run Selenium Tests With NUnit — TestMu AI (Formerly LambdaTest)
+# Run Selenium Tests With NUnit — TestMu AI (Formerly LambdaTest)
 
 ![image](https://user-images.githubusercontent.com/70570645/171429042-610e8f3d-d2a4-4896-8bdb-8aeed87e0ce7.png)
 
