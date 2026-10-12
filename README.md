@@ -1,5 +1,7 @@
 # Run Selenium Tests with C# NUnit on TestMu AI (Formerly LambdaTest)
 
+> Automated End-to-End (E2E) testing of web apps with Selenium, C#, and NUnit across real browsers and operating systems on TestMu AI.
+
 <p align="center">
   <a href="https://www.testmuai.com/"><img src="https://img.shields.io/badge/MADE%20BY%20TestMu%20AI-000000.svg?style=for-the-badge&labelColor=000" alt="Made by TestMu AI"></a>
   <a href="https://www.nuget.org/packages/NUnit/"><img src="https://img.shields.io/nuget/v/NUnit.svg?style=for-the-badge&labelColor=000000" alt="NUnit version"></a>
